@@ -93,7 +93,7 @@
             <h4>Tickets</h4>
             <ul class="tickets">
               <li class="f--6" v-for="(todo, index) in todos" :key="index">
-                {{ todo }}
+                {{ todo }} ?????
               </li>
             </ul>
           </div>
