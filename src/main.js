@@ -3,6 +3,11 @@ import App from "./App.vue";
 import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
+import "./sass/vendor/bootstrap.scss";
+import { IconsPlugin, BootstrapVue } from "bootstrap-vue";
+
+Vue.use(IconsPlugin);
+Vue.use(BootstrapVue);
 
 Vue.config.productionTip = false;
 

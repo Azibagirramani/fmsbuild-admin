@@ -1,0 +1,8 @@
+
+h1, h2, h3, h4, h5, p {
+    color: #5D5D5F;
+}
+
+// Then import Bootstrap an BootstrapVue SCSS files (order is important)
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/bootstrap-vue/src/index.scss';
