@@ -3,9 +3,11 @@ import VueRouter from "vue-router";
 
 // views
 import DashboardIndex from "@/views/dashboard";
+import Login from "@/views/login";
 
 // components
 import Overview from "@/views/overview";
+import Account from "@/views/accountManagement.vue";
 
 Vue.use(VueRouter);
 
@@ -19,9 +21,19 @@ const routes = [
       {
         path: "overview",
         name: "overview",
-        component: Overview
-      }
-    ]
+        component: Overview,
+      },
+      {
+        path: "account-management",
+        name: "account",
+        component: Account,
+      },
+    ],
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: Login,
   },
 ];
 

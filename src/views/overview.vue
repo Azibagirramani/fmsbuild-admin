@@ -92,22 +92,22 @@
           <div class="p-4 flex-fill ticket-todo">
             <h4>Tickets</h4>
             <ul class="tickets">
-              <li class="f--6" v-for="(todo, index) in todos" :key="index">
-                {{ todo }} ?????
+              <li class="f--7 my-1" v-for="(todo, index) in todos" :key="index">
+                {{ todo }}
               </li>
             </ul>
           </div>
           <div class="text-center flex-fill p-4 border">
             <h2>4</h2>
             <p>Accounts</p>
-            <p>view all accounts</p>
+            <p class="f--6">view all accounts</p>
           </div>
           <div class="text-center flex-fill p-4 border">
             <p class="fw-bold">Your last logs</p>
             <h2>10k</h2>
-            <p>visits</p>
+            <p class="f--6">visits</p>
             <h2>10k</h2>
-            <p>Comments</p>
+            <p class="f--6">Comments</p>
           </div>
         </div>
       </div>
@@ -127,12 +127,7 @@ export default {
   data() {
     return {
       requests: [1, 2, 3, 4],
-      todos: [
-        "Slow loading time",
-        "update login form",
-        "Remove user from db",
-        "don't logout before 10",
-      ],
+      todos: ["Slow loading time", "update login form", "Remove user from db"],
     };
   },
 
@@ -156,6 +151,10 @@ $baseColor: #cdebe1;
 
 .f--6 {
   font-size: 0.82rem;
+}
+
+.f--7 {
+  font-size: 0.7rem;
 }
 
 .f--01 {

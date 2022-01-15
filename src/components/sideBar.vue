@@ -12,13 +12,23 @@
     >
     </a>
     <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
-      <li class="nav-items" v-for="(link, index) in urls" :key="index">
+      <li
+        class="nav-items"
+        v-for="(link, index) in urls"
+        :key="index"
+        @click="updateActive(index)"
+      >
         <router-link
           :to="link.path"
           class="nav-link py-3 border-bottom"
           v-b-tooltip.hover.right="link.name"
         >
-          <i class="bi" :class="link.icon"></i>
+          <i
+            class="bi"
+            :class="
+              index === isActive ? `${link.icon} bi--active` : `${link.icon}`
+            "
+          ></i>
         </router-link>
       </li>
     </ul>
@@ -56,6 +66,7 @@
 export default {
   data() {
     return {
+      isActive: false,
       urls: [
         {
           name: "Dashboard",
@@ -63,37 +74,55 @@ export default {
           path: "/overview",
         },
         {
-          name: "Users",
+          name: "Account management",
           icon: "bi-people",
-          path: "",
+          path: "/account-management",
         },
         {
           name: "Access Management",
-          icon: "bi-people",
+          icon: "bi-key-fill",
+          path: "",
+        },
+        {
+          name: "Payment portals",
+          icon: "bi bi-cash-stack",
+          path: "",
+        },
+        {
+          name: "Stats and usage",
+          icon: "bi bi-reception-4",
           path: "",
         },
       ],
     };
   },
-  methods: {},
+  methods: {
+    updateActive(index) {
+      this.isActive = index;
+    },
+  },
 };
 </script>
 
 <style lang="css" scoped>
-.bi {
+.bi--active {
+  color: green !important;
   vertical-align: -0.125em;
   pointer-events: none;
   fill: currentColor;
 }
-
+.bi {
+  vertical-align: -0.125em;
+  pointer-events: none;
+  fill: currentColor;
+  color: black !important;
+}
 .dropdown-toggle {
   outline: 0;
 }
-
 .nav-flush .nav-link {
   border-radius: 0;
 }
-
 .btn-toggle {
   display: inline-flex;
   align-items: center;
@@ -108,7 +137,6 @@ export default {
   color: rgba(0, 0, 0, 0.85);
   background-color: #d2f4ea;
 }
-
 .btn-toggle::before {
   width: 1.25em;
   line-height: 0;
