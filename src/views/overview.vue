@@ -1,7 +1,7 @@
 <template>
   <div class="">
-    <div class="row vh-100 ml-4">
-      <div class="col-md-10">
+    <div class="d-flex justify-content-between gap-5 w-100">
+      <div class="ml-5 left-side flex-fill">
         <div class="mt-5">
           <h5 class="fw-bold">Welcome back, Kelvin Mansi</h5>
           <p class="text-muted">You have 6 notifications and 2 new messages</p>
@@ -87,8 +87,10 @@
           </div>
         </div>
       </div>
-      <div class="col-md-2">
-        <div class="d-flex flex-column justify-content-center">
+      <div
+        class="right-side d-flex flex-column align-items-center justify-content-center vh-100"
+      >
+        <div>
           <div class="p-4 flex-fill ticket-todo">
             <h4>Tickets</h4>
             <ul class="tickets">

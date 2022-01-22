@@ -2,7 +2,8 @@
   <div class="">
     <div class="d-flex">
       <SideBar />
-      <div class="col bg-overview">
+
+      <div class="bg-overview flex-fill">
         <router-view />
       </div>
     </div>

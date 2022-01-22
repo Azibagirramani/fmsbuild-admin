@@ -8,6 +8,8 @@ import Login from "@/views/login";
 // components
 import Overview from "@/views/overview";
 import Account from "@/views/accountManagement.vue";
+import Access from "@/views/accessManagement.vue";
+import Projects from "@/views/projectsManagement.vue";
 
 Vue.use(VueRouter);
 
@@ -28,6 +30,16 @@ const routes = [
         name: "account",
         component: Account,
       },
+      {
+        path: "access-management",
+        name: "access",
+        component: Access,
+      },
+      {
+        path: "project-management",
+        name: "project",
+        component: Projects,
+      }
     ],
   },
   {

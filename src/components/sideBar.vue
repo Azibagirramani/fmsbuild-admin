@@ -79,9 +79,14 @@ export default {
           path: "/account-management",
         },
         {
+          name: "Project Management",
+          icon: "bi bi-journal-arrow-up",
+          path: "/project-management",
+        },
+        {
           name: "Access Management",
           icon: "bi-key-fill",
-          path: "",
+          path: "/access-management",
         },
         {
           name: "Payment portals",

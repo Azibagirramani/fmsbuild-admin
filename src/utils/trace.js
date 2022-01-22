@@ -36,15 +36,19 @@ class Trace {
     return navigator.userAgentData["mobile"] ? "mobile" : "web";
   }
 
+  callback(data) {
+    console.log(data);
+  }
+
   /**
    *  get device location
    *
    */
-
   getLocationService() {
-    console.log(window.navigator.geolocation.getCurrentPosition());
-    // navigator.geolocation()
+    // window.navigator.geolocation.getCurrentPosition(this.callback);
+    console.log(window)
   }
+
 }
 
 export default Trace;

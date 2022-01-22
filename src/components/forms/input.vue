@@ -3,7 +3,7 @@
     <input
       :type="type"
       v-model="ivalue"
-      class="form-control"
+      class="form-control rounded"
       :id="placeholder"
       :placeholder="name"
       :required="required"

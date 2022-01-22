@@ -41,11 +41,9 @@
 
       <template #table-caption>{{ tableCaption }}</template>
       <template #empty>
-        <BaseState
-          :description="''"
-          :label="'No data'"
-          :icons="'hourglass_disabled'"
-        />
+        <div class="text-center">
+          <h4>{{ emptyState }}</h4>
+        </div>
       </template>
       <template #table-busy>
         <div class="text-center text-danger my-2">
@@ -59,11 +57,14 @@
 
 <script>
 export default {
-
   data() {
     return {};
   },
   props: {
+    emptyState: {
+      type: String,
+      default: "No data found",
+    },
     tableCaption: {
       type: String,
       default: "",

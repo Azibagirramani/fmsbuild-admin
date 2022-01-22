@@ -1,65 +1,31 @@
 <template>
   <div class="">
-    <section class="mt-5 ms-5">
-      <div class="d-flex justify-content-end mb-4">
-        <BaseButton
-          :btnEx="'btn--primary btn--sm'"
-          @click="toggleAccountManagement"
-        >
-          <i class="bi bi-plus"></i>
-          <span>Add Account</span>
-        </BaseButton>
+    <section class="ms-5">
+      <div class="d-flex justif-content-between align-items-center">
+        <b-breadcrumb :items="crums"></b-breadcrumb>
       </div>
-      <div class="row w-100">
-        <div class="col-md-10">
-          <BaseCard>
-            <div class="mb-3">
-              <BaseInput :name="'search...'" :type="'text'" />
-            </div>
-
-            <BaseTable :items="items" />
-            <div class="d-flex justify-content-end">
-              <BasePagination />
-            </div>
-          </BaseCard>
-        </div>
-        <div class="col-md-2 border p-2 bg-white">
-          <div class="mb-3">
-            <p class="">Last seen</p>
-            <BaseInput :type="'date'" :name="'Last seen'" />
-          </div>
-          <div class="mb-3">
-            <p class="">Created at</p>
-            <BaseInput :type="'date'" :name="'Last seen'" />
-          </div>
-          <div class="">
-            <p class="mt-2">Status</p>
-            <BaseSelect :tems="['Active', 'Suspended', 'Blocked']" />
-          </div>
-        </div>
-      </div>
+      <BaseTable :items="items" />
     </section>
   </div>
 </template>
 
 <script>
 import BaseTable from "@/components/baseTable.vue";
-import BaseCard from "@/components/baseNewCard.vue";
-import BaseButton from "@/components/forms/baseButton.vue";
-import BaseInput from "@/components/forms/input.vue";
-import BaseSelect from "@/components/forms/select.vue";
-import BasePagination from "@/components/pagination.vue";
 export default {
   components: {
     BaseTable,
-    BaseCard,
-    BaseButton,
-    BaseInput,
-    BaseSelect,
-    BasePagination,
   },
   data() {
     return {
+      crums: [
+        {
+          text: "Projects",
+        },
+        {
+          text: "Recent",
+          active: true,
+        },
+      ],
       items: [
         {
           id: 1,
