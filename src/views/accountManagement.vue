@@ -1,10 +1,17 @@
 <template>
-  <div class="">
-    <section class="ms-5">
-      <div class="d-flex justif-content-between align-items-center">
-        <b-breadcrumb :items="crums"></b-breadcrumb>
+  <div class="mt-4">
+    <section class="mx-5">
+      <div class="d-flex justify-content-between align-items-center">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">Home</li>
+            <li class="breadcrumb-item">Library</li>
+          </ol>
+        </nav>
+
+        <p>View all</p>
       </div>
-      <BaseTable :items="items" />
+      <BaseTable />
     </section>
   </div>
 </template>
@@ -16,169 +23,7 @@ export default {
     BaseTable,
   },
   data() {
-    return {
-      crums: [
-        {
-          text: "Projects",
-        },
-        {
-          text: "Recent",
-          active: true,
-        },
-      ],
-      items: [
-        {
-          id: 1,
-          a: 0,
-          b: 1,
-          c: 2,
-          d: 3,
-          e: 4,
-          f: 5,
-          g: 6,
-          h: 7,
-          i: 8,
-          j: 9,
-          k: 10,
-          l: 11,
-        },
-        {
-          id: 2,
-          a: 0,
-          b: 1,
-          c: 2,
-          d: 3,
-          e: 4,
-          f: 5,
-          g: 6,
-          h: 7,
-          i: 8,
-          j: 9,
-          k: 10,
-          l: 11,
-        },
-        {
-          id: 3,
-          a: 0,
-          b: 1,
-          c: 2,
-          d: 3,
-          e: 4,
-          f: 5,
-          g: 6,
-          h: 7,
-          i: 8,
-          j: 9,
-          k: 10,
-          l: 11,
-        },
-        {
-          id: 4,
-          a: 0,
-          b: 1,
-          c: 2,
-          d: 3,
-          e: 4,
-          f: 5,
-          g: 6,
-          h: 7,
-          i: 8,
-          j: 9,
-          k: 10,
-          l: 11,
-        },
-        {
-          id: 5,
-          a: 0,
-          b: 1,
-          c: 2,
-          d: 3,
-          e: 4,
-          f: 5,
-          g: 6,
-          h: 7,
-          i: 8,
-          j: 9,
-          k: 10,
-          l: 11,
-        },
-        {
-          id: 6,
-          a: 0,
-          b: 1,
-          c: 2,
-          d: 3,
-          e: 4,
-          f: 5,
-          g: 6,
-          h: 7,
-          i: 8,
-          j: 9,
-          k: 10,
-          l: 11,
-        },
-        {
-          id: 7,
-          a: 0,
-          b: 1,
-          c: 2,
-          d: 3,
-          e: 4,
-          f: 5,
-          g: 6,
-          h: 7,
-          i: 8,
-          j: 9,
-          k: 10,
-          l: 11,
-        },
-        {
-          id: 8,
-          a: 0,
-          b: 1,
-          c: 2,
-          d: 3,
-          e: 4,
-          f: 5,
-          g: 6,
-          h: 7,
-          i: 8,
-          j: 9,
-          k: 10,
-          l: 11,
-        },
-        {
-          id: 9,
-          a: 0,
-          b: 1,
-          c: 2,
-          d: 3,
-          e: 4,
-          f: 5,
-          g: 6,
-          h: 7,
-          i: 8,
-          j: 9,
-          k: 10,
-          l: 11,
-        },
-        {
-          id: 10,
-          a: 0,
-          b: 1,
-          c: 2,
-          d: 3,
-          e: 4,
-          f: 5,
-          g: 6,
-          h: 7,
-          i: 8,
-          j: 9,
-          k: 10,
-          l: 11,
-        },
-      ],
-    };
+    return {};
   },
   methods: {
     toggleAccountManagement() {
@@ -189,4 +34,17 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped lang="scss">
+.breadcrumb {
+  background-color: transparent;
+
+  .breadcrumb-item {
+    color: red !important;
+    cursor: pointer !important;
+  }
+
+  &__active {
+    color: green;
+  }
+}
+</style>
