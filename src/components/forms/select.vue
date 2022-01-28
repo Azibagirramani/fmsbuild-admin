@@ -48,3 +48,10 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.form-select {
+  max-width: 5rem !important;
+  height: 38px !important;
+}
+</style>

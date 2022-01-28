@@ -6,11 +6,11 @@ import store from "./store";
 import "./sass/vendor/bootstrap.scss";
 import { IconsPlugin, BootstrapVue } from "bootstrap-vue";
 
+
 import "./utils/utils.index";
 
 Vue.use(IconsPlugin);
 Vue.use(BootstrapVue);
-
 Vue.config.productionTip = false;
 
 new Vue({
